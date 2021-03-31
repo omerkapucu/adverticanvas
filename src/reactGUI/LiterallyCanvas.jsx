@@ -52,9 +52,6 @@ const LiterallyCanvas = createReactClass({
       this.lc = new LiterallyCanvasModel(this.props);
     }
 
-    this.toolButtonComponents = this.lc.opts.tools.map(ToolClass => {
-      return createToolButton(new ToolClass(this.lc));
-    });
   },
 
   componentDidMount() {
@@ -87,8 +84,6 @@ const LiterallyCanvas = createReactClass({
     return (
       <div className={`literally ${topOrBottomClassName}`} style={style}>
         <CanvasContainer ref={item => this.canvas = item} />
-        <Picker {...pickerProps} />
-        <Options lc={lc} imageURLPrefix={imageURLPrefix} />
       </div>
     );
   }
