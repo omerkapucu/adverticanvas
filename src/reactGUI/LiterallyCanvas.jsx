@@ -23,7 +23,7 @@ const CanvasContainer = createReactClass({
   },
   render() {
     return (
-      <div key="literallycanvas" className="lc-drawing with-gui" />
+      <div key="literallycanvas" className="lc-drawing without-gui" />
     );
   }
 })
